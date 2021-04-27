@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body, p, h1, h2, h3, a {
+  color: #999;
+  text-decoration: none;
+}
+
+body {
+  background-color: #333333;
+  position: relative;
+  height: 3000px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1440px;
+  margin: auto;
+}
+
+@media screen and (max-width: 1440px) {
+  nav {
+    margin: 0 5%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  nav {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+nav img {
+  width: 20%;
+}
+
+@media screen and (max-width: 640px) {
+  nav img {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+nav .menu_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 50px;
+}
+
+@media screen and (max-width: 640px) {
+  nav .menu_items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 0;
+  }
+}
+
+nav .menu_items li {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+
+nav .menu_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 640px) {
+  nav .menu_social {
+    margin: 20px auto;
+  }
+}
+
+nav .menu_social a {
+  position: relative;
+  font-size: 30px;
+  padding-right: 20px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+nav .menu_social a:hover {
+  color: #fff;
+}
+
+/* WIDGETS AREA START */
+.widget {
+  position: fixed;
+  z-index: 10;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(250, 140, 44, 0.8);
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+          box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.widget i {
+  color: #333;
+  font-size: 20px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.widget i.ativo {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.widget i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.widget:hover {
+  -webkit-box-shadow: #000 0 0 5px;
+          box-shadow: #000 0 0 5px;
+}
+
+.side_menu {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: #fa8c2c;
+  -webkit-transition: ease-in .3s;
+  transition: ease-in .3s;
+}
+
+.side_menu span {
+  display: block;
+  margin: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.side_menu.ativo {
+  right: 0;
+}
+
+.widget_backtop {
+  position: fixed;
+  z-index: 9;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(250, 140, 44, 0.8);
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+          box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.widget_backtop i {
+  color: #333;
+  font-size: 20px;
+}
+
+/* WIDGET AREA END */
+/* TITLE AREA */
+.title {
+  max-width: 1440px;
+  margin: auto;
+}
+
+@media screen and (max-width: 1440px) {
+  .title {
+    margin: 0 5%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.title h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fa8c2c;
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .title h1 {
+    font-size: 32px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

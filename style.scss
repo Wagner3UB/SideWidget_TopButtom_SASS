@@ -1,0 +1,170 @@
+@mixin section {
+  max-width: 1440px;
+  margin: auto;
+  @media screen and (max-width: 1440px) {
+    margin: 0 5%;
+  }
+  @media screen and (max-width: 640px){
+    width: 100%;
+    margin: 0;    
+  }
+}
+
+$orange: rgb(250, 140, 44);
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body, p, h1, h2, h3, a{
+  color: #999;
+  text-decoration: none;
+}
+body {
+  background-color: rgba(#333, 1);
+  position: relative;
+  height: 3000px;
+}
+nav {
+  display: flex;
+  @include section;
+  @media screen and (max-width: 640px){
+    flex-wrap: wrap;    
+  }
+
+  img{
+    width: 20%;
+    @media screen and (max-width: 640px){
+      width: 50%;
+      margin: auto;    
+    }
+  }
+  .menu_items{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 50px;
+    @media screen and (max-width: 640px){
+      justify-content: center;  
+      margin-right: 0;
+    }
+    li{
+      font-size: 20px;
+      text-transform: uppercase;
+      padding: 0 20px;
+    }
+  }
+  .menu_social{
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 640px){
+      margin: 20px auto;
+    }
+    
+
+    a{
+      position: relative;
+      font-size: 30px;
+      padding-right: 20px;
+      transition: 1s;
+    }
+    a:hover{
+      color: #fff;
+    }
+
+  }
+}
+
+/* WIDGETS AREA START */
+
+.widget{
+  position: fixed;
+  z-index: 10; bottom: 20px; right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba($orange, .8);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(#000, .2) 1px 1px 10px;
+  transition: .3s;
+  cursor: pointer;
+  i {
+    color: #333;
+    font-size: 20px;
+    transition: .5s;
+  }
+  i.ativo{
+    transform: rotate(270deg);
+    
+  }
+  i{
+    transform: rotate(90deg);
+  }
+
+}
+.widget:hover{
+  box-shadow: #000 0 0 5px;
+}
+.side_menu {
+  position: fixed;
+  z-index: 9; top: 0; right: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: $orange;
+  transition: ease-in .3s;
+  span{
+    display: block;
+    margin: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
+.side_menu.ativo{
+  right: 0;
+}
+.widget_backtop{
+  position: fixed;
+  z-index: 9; bottom: 20px; left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba($orange, .8);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(#000, .2) 1px 1px 10px;
+  transition: .3s;
+  cursor: pointer;
+  i {
+    color: #333;
+    font-size: 20px;
+  }
+}
+
+/* WIDGET AREA END */
+
+/* TITLE AREA */
+
+.title {
+  @include section;
+  h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $orange;
+    text-shadow: rgba(#000, .2) 1px 1px 10px;
+    @media screen and (max-width: 640px){
+      font-size: 32px;
+    }
+  }
+  
+}
+
